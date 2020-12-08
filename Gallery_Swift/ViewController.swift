@@ -79,12 +79,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomeCollectionViewCell
         
         cell.nameLbl.text = photos[indexPath.row].author?.capitalized
-        cell.imageView.contentMode = .scaleToFill
+        cell.imageView.contentMode = .scaleAspectFill
         
         let defaultLink = photos[indexPath.row].download_url
-        print(defaultLink as Any)
         cell.imageView.downloaded(from: defaultLink)
-        
+
         return cell
     }
 }
