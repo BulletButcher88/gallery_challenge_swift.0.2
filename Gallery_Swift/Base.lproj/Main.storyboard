@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,20 +14,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gallery_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flowerpaper" translatesAutoresizingMaskIntoConstraints="NO" id="8ig-qX-iCm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1f3-OE-Mt6">
-                                <rect key="frame" x="-1" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="-1" y="0.0" width="896" height="414"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5GE-9K-hey">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xNE-ek-Ckq">
-                                            <rect key="frame" x="0.0" y="50" width="414" height="846"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="fWq-WC-Wrv">
                                                 <size key="itemSize" width="399" height="211"/>
@@ -37,7 +37,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="IKg-I7-zpm" userLabel="customeCell" customClass="CustomeCollectionViewCell" customModule="Gallery_Swift" customModuleProvider="target">
-                                                    <rect key="frame" x="7.5" y="18" width="399" height="211"/>
+                                                    <rect key="frame" x="249" y="18" width="399" height="211"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bDn-Ss-TKj">
                                                         <rect key="frame" x="0.0" y="0.0" width="399" height="211"/>
@@ -63,9 +63,9 @@
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="yp3-Hv-7Fi" secondAttribute="bottom" constant="20" id="7fS-Vg-QJL"/>
                                                             <constraint firstAttribute="trailing" secondItem="yp3-Hv-7Fi" secondAttribute="trailing" constant="20" id="BhY-mI-a89"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Cix-vb-lEY" secondAttribute="trailing" constant="20" id="Hfk-yc-1iJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Cix-vb-lEY" secondAttribute="trailingMargin" constant="28" id="Hfk-yc-1iJ"/>
                                                             <constraint firstAttribute="bottom" secondItem="Cix-vb-lEY" secondAttribute="bottom" id="bpK-Nu-9eL"/>
-                                                            <constraint firstItem="yp3-Hv-7Fi" firstAttribute="leading" secondItem="bDn-Ss-TKj" secondAttribute="leading" constant="20" id="cLS-xc-vUe"/>
+                                                            <constraint firstItem="yp3-Hv-7Fi" firstAttribute="leading" secondItem="bDn-Ss-TKj" secondAttribute="leadingMargin" constant="12" id="cLS-xc-vUe"/>
                                                             <constraint firstItem="Cix-vb-lEY" firstAttribute="leading" secondItem="bDn-Ss-TKj" secondAttribute="leading" constant="20" id="gbB-qe-tYS"/>
                                                             <constraint firstItem="yp3-Hv-7Fi" firstAttribute="top" secondItem="bDn-Ss-TKj" secondAttribute="top" constant="1" id="qic-Na-rPz"/>
                                                         </constraints>
@@ -80,10 +80,13 @@
                                         </collectionView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="xNE-ek-Ckq" firstAttribute="top" secondItem="5GE-9K-hey" secondAttribute="top" constant="50" id="0TG-Hv-ffk"/>
-                                        <constraint firstAttribute="bottom" secondItem="xNE-ek-Ckq" secondAttribute="bottom" id="Dd0-dc-IDb"/>
+                                        <constraint firstAttribute="trailing" secondItem="xNE-ek-Ckq" secondAttribute="trailing" id="BCe-Ln-Kyk"/>
+                                        <constraint firstAttribute="trailing" secondItem="xNE-ek-Ckq" secondAttribute="trailing" id="HZU-lZ-DLP"/>
+                                        <constraint firstItem="xNE-ek-Ckq" firstAttribute="top" secondItem="5GE-9K-hey" secondAttribute="top" id="XlP-nx-7AU"/>
                                         <constraint firstAttribute="trailing" secondItem="xNE-ek-Ckq" secondAttribute="trailing" id="dbZ-qE-U5s"/>
+                                        <constraint firstItem="xNE-ek-Ckq" firstAttribute="leading" secondItem="5GE-9K-hey" secondAttribute="leading" id="kO1-Cd-v5G"/>
                                         <constraint firstItem="xNE-ek-Ckq" firstAttribute="leading" secondItem="5GE-9K-hey" secondAttribute="leading" id="tWd-sB-Q7z"/>
+                                        <constraint firstAttribute="bottom" secondItem="xNE-ek-Ckq" secondAttribute="bottom" id="tex-E8-Cej"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
