@@ -42,7 +42,7 @@ struct Photo: Decodable {
     let width: Int?
     let heigth: Int?
     let url: String
-    let download_url: String?
+    let download_url: String
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource {
@@ -81,7 +81,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         cell.nameLbl.text = photos[indexPath.row].author?.capitalized
         cell.imageView.contentMode = .scaleToFill
         
-        let defaultLink = photos[indexPath.row].url
+        let defaultLink = photos[indexPath.row].download_url
         print(defaultLink as Any)
         cell.imageView.downloaded(from: defaultLink)
         
