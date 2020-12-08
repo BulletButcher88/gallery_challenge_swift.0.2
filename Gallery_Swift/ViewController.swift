@@ -4,11 +4,10 @@
 //
 //  Created by Mark Butcher on 7/12/20.
 //
-import Foundation
 import UIKit
 
 extension UIImageView {
-    func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -22,12 +21,20 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
-        downloadedFrom(url: url, contentMode: mode)
+        downloaded(from: url, contentMode: mode)
     }
 }
 
+extension String {
+    func toImage() -> UIImage? {
+        if let data = Data(base64Encoded: self, options: .ignoreUnknownCharacters){
+            return UIImage(data: data)
+        }
+        return nil
+    }
+}
 
 struct Photo: Decodable {
     let id: String?
@@ -46,6 +53,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dataSource = self
 
         let url = URL(string: "https://picsum.photos/v2/list")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -62,7 +71,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             }
         }.resume()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
@@ -70,15 +79,14 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomeCollectionViewCell
         
         cell.nameLbl.text = photos[indexPath.row].author?.capitalized
-        cell.imageView.contentMode = .scaleAspectFit
+        cell.imageView.contentMode = .scaleToFill
         
         let defaultLink = photos[indexPath.row].url
-        
-        cell.imageView.downloadedFrom(link: defaultLink)
+        print(defaultLink as Any)
+        cell.imageView.downloaded(from: defaultLink)
         
         return cell
     }
-    
 }
 
 

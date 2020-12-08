@@ -45,7 +45,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="399" height="211"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flowerpaper" translatesAutoresizingMaskIntoConstraints="NO" id="yp3-Hv-7Fi">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yp3-Hv-7Fi">
                                                                 <rect key="frame" x="20" y="1" width="359" height="190"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="180" id="09z-r5-r17"/>
