@@ -67,10 +67,8 @@
                                                             <constraint firstAttribute="trailing" secondItem="yp3-Hv-7Fi" secondAttribute="trailing" id="BhY-mI-a89"/>
                                                             <constraint firstAttribute="trailing" secondItem="Cix-vb-lEY" secondAttribute="trailingMargin" id="Hfk-yc-1iJ"/>
                                                             <constraint firstAttribute="bottom" secondItem="Cix-vb-lEY" secondAttribute="bottom" id="bpK-Nu-9eL"/>
-                                                            <constraint firstItem="yp3-Hv-7Fi" firstAttribute="leading" secondItem="bDn-Ss-TKj" secondAttribute="leadingMargin" constant="12" id="cLS-xc-vUe"/>
                                                             <constraint firstAttribute="trailing" secondItem="yp3-Hv-7Fi" secondAttribute="trailing" id="fXY-Rx-Jmz"/>
                                                             <constraint firstItem="Cix-vb-lEY" firstAttribute="leading" secondItem="bDn-Ss-TKj" secondAttribute="leading" id="gbB-qe-tYS"/>
-                                                            <constraint firstItem="yp3-Hv-7Fi" firstAttribute="top" secondItem="bDn-Ss-TKj" secondAttribute="top" constant="1" id="qic-Na-rPz"/>
                                                             <constraint firstItem="yp3-Hv-7Fi" firstAttribute="centerX" secondItem="bDn-Ss-TKj" secondAttribute="centerX" id="z2M-CE-YW1"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
