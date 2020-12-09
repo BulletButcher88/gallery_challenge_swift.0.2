@@ -86,8 +86,8 @@
                                     <constraints>
                                         <constraint firstItem="xNE-ek-Ckq" firstAttribute="top" secondItem="5GE-9K-hey" secondAttribute="top" id="H5h-6v-gUo"/>
                                         <constraint firstItem="xNE-ek-Ckq" firstAttribute="leading" secondItem="5GE-9K-hey" secondAttribute="leading" id="YN1-aK-Xve"/>
-                                        <constraint firstAttribute="trailing" secondItem="xNE-ek-Ckq" secondAttribute="trailing" id="dbZ-qE-U5s"/>
-                                        <constraint firstAttribute="bottom" secondItem="xNE-ek-Ckq" secondAttribute="bottom" id="tex-E8-Cej"/>
+                                        <constraint firstItem="xNE-ek-Ckq" firstAttribute="centerY" secondItem="5GE-9K-hey" secondAttribute="centerY" id="Yw7-qf-WSW"/>
+                                        <constraint firstItem="xNE-ek-Ckq" firstAttribute="centerX" secondItem="5GE-9K-hey" secondAttribute="centerX" id="sJe-mF-acx"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
